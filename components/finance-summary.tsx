@@ -74,16 +74,7 @@ export function FinanceSummary() {
               </div>
               <span className="font-semibold text-foreground">{formatCurrency(averageAmount)}</span>
             </div>
-
-            <div className="flex items-center justify-between rounded-lg bg-muted/50 p-3">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Último ticket</span>
-              </div>
-              <span className="font-semibold text-foreground">
-                {tickets.length > 0 ? new Date(tickets[0].fecha).toLocaleDateString("es-AR") : "-"}
-              </span>
-            </div>
+            {/* Se eliminó la tarjeta de "Último ticket" por petición del usuario */}
           </div>
         </div>
       </Card>
