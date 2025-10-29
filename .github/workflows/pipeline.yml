@@ -45,7 +45,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Next.js static site
-        run: pnpm run build   # genera /out
+        run: pnpm run build && npx next export   # genera /out
 
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
