@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // genera la carpeta /out para S3
+  output: 'export', // genera /out para S3
   images: {
-    unoptimized: true, // necesario porque no hay Image Optimization en S3
+    unoptimized: true, // necesario para <Image /> en S3
   },
   typescript: {
     ignoreBuildErrors: true,
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
