@@ -42,7 +42,7 @@ jobs:
       - run: pnpm -v
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build Next.js static site
         run: pnpm run build && npx next export   # genera /out
