@@ -18,9 +18,9 @@ jobs:
       cancel-in-progress: true
 
     env:
-      AWS_REGION: us-east-2 #Modificar
-      S3_BUCKET: letterbox-movies-prod-2025 #Modificar
-      CF_DIST_ID: E3VXJRORKU2FU7 #Modificar
+      AWS_REGION: us-east-2
+      S3_BUCKET: ia-tickets-prod
+      CF_DIST_ID: E3JPBH0RIM7T82
 
     steps:
       - name: Checkout
@@ -50,7 +50,7 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::3:role/Movies-letterbox-Prod #Modificar
+          role-to-assume: arn:aws:iam::277707101441:role/IA-tickets-Prod
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Deploy to S3
