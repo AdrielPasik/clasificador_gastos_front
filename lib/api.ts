@@ -44,7 +44,7 @@ export interface FrontendOCR {
 }
 
 /** 🔥 URL fija del backend FastAPI */
-const BASE_URL = "http://18.221.218.234:8000"
+const BASE_URL = "https://miticket.duckdns.org"
 
 /**
  * Sube una imagen de ticket al servidor para que el backend procese el OCR.
